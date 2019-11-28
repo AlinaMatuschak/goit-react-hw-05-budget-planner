@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import Form from '../shared/Form';
 import Label from '../shared/Label';
 import Input from '../shared/Input';
 import Button from '../shared/Button';
-import saveBudget from '../../redux/Budget/budgetActions';
 
-class BudgetForm extends Component {
+export default class BudgetForm extends Component {
   state = {
     budget: '',
   };
@@ -37,12 +35,3 @@ class BudgetForm extends Component {
     );
   }
 }
-
-const mapDispatchToProps = dispatch => ({
-  onSave: value => dispatch(saveBudget(value)),
-});
-
-export default connect(
-  null,
-  mapDispatchToProps,
-)(BudgetForm);

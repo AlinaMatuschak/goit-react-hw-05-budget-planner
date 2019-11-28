@@ -1,1 +1,1 @@
-export { default } from './ExpensesTable';
+export { default } from './ExpensesTableConteiner';

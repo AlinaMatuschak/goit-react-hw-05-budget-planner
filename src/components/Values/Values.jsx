@@ -1,12 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { section } from './Values.module.css';
 import Value from './Value';
-import {
-  getBudget,
-  getValueOfExpenses,
-  getBalance,
-} from '../../redux/Selectors';
 
 const Values = ({ budget, expenses, balance }) => (
   <section className={section}>
@@ -16,12 +10,4 @@ const Values = ({ budget, expenses, balance }) => (
   </section>
 );
 
-const mapStateToProps = state => {
-  return {
-    budget: getBudget(state),
-    expenses: getValueOfExpenses(state),
-    balance: getBalance(state),
-  };
-};
-
-export default connect(mapStateToProps)(Values);
+export default Values;
