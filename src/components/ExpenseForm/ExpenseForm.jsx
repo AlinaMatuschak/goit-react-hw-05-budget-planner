@@ -15,6 +15,7 @@ export default class ExpenseForm extends Component {
   handleSubmit = e => {
     const { name, amount } = this.state;
     e.preventDefault();
+    if (name === '' || amount === '') return;
 
     this.props.onSave(name, amount);
     this.setState({ name: '', amount: '' });
